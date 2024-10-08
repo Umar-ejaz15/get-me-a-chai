@@ -1,101 +1,74 @@
-import Image from "next/image";
+import HomePageCard from "@/components/HomePageCard";
+import Button1 from "@/components/Button1";
+import Button2 from "@/components/Button2";
 
 export default function Home() {
+  const CardData = [
+    {
+      id: 1,
+      title: "Donate",
+      description:
+        "Donate to the people who need it the most. We are a non-profit organization that helps people in need.",
+      image: "https://media1.giphy.com/media/Vnk8f29XU6GSZK8uGJ/giphy.gif",
+    },
+    {
+      id: 2,
+      title: "Volunteer",
+      description:
+        "Volunteer to help the people who need it the most. We are a non-profit organization that helps people in need.",
+      image: "https://media4.giphy.com/media/OccMlQrNO0YU4zFchY/source.gif",
+    },
+    {
+      id: 3,
+      title: "Fundraise",
+      description:
+        "Fundraise to help the people who need it the most. We are a non-profit organization that helps people in need.",
+      image:
+        "https://cdn.dribbble.com/users/873395/screenshots/3157364/desk-full-gif.gif",
+    },
+  ];
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className=" ">
+        <div className="flex flex-col items-center text-center justify-center h-[auto] mt-20 mb-10">
+          <div className="flex gap-5 items-center  justify-center ">
+            <h1 className="font-semibold text-6xl tracking-tighter">
+              Buy Me a Chai
+            </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <img
+              src="https://media0.giphy.com/media/1bNudJqrpQXbLDK8lM/giphy.gif?cid=6c09b952rzmlmf1h40l4edqop2eo3tcd2xs0wcm1qnw3ia4b&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+              alt="chai"
+              width={50}
+              height={50}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <p className="w-[70vw] mt-10">
+            {" "}
+            Your contribution, no matter how small, helps us continue our
+            mission and keeps us fueled with the chai we love. It's a simple way
+            to show your appreciation and keep the creativity flowing. Thank you
+            for your support!
+          </p>
+          <div className="btn flex gap-5 mt-5">
+            <Button1 text="Start here" />
+            <Button2 text="Read more" />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className="bg-white w-full h-1 opacity-10"></div>
+      <div className="container flex  flex-col justify-center items-center mx-auto m-10">
+        <h1 className="m-10 text-3xl font-semibold uppercase">
+          Your fans can buy you a chai
+        </h1>
+        <div className="container flex  flex-wrap">
+          {CardData.map((card) => (
+            <>
+              <HomePageCard key={card.id} card={card} />
+            </>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
